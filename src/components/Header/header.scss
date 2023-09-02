@@ -1,8 +1,13 @@
 @import "../../style/variables";
+@import "../../style/mixin";
 
 #logo {
   width: 210px;
   height: 68px;
+  @include mobile-breakpoint {
+    width: 145px;
+    height: 47px;
+  }
 }
 .header {
     display: flex;
@@ -19,7 +24,9 @@
     font-weight: 500;
     align-self: center;
     padding: 20px;
-
+    @include mobile-breakpoint {
+      font-size: 12px;
+    }
   }
 }
 .active {

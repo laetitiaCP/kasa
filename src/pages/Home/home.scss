@@ -1,2 +1,16 @@
 @import "../../style/variables";
+@import "../../style/mixin";
 
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  @include mobile-breakpoint {
+    margin-top: 0;
+    background-color: #F6F6F6;
+  }
+}
