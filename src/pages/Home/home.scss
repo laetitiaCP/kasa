@@ -14,3 +14,14 @@
     background-color: #F6F6F6;
   }
 }
+.banner__img {
+  position: absolute;
+  height: 223px;
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  @include mobile-breakpoint {
+    height: 111px;
+  }
+}

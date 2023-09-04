@@ -1,0 +1,17 @@
+@import "../../style/mixin";
+
+.collapses-wrap {
+  margin-top: 120px;
+}
+.aPropos-image {
+  position: absolute;
+  height: 223px;
+  border-radius: 25px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  @include mobile-breakpoint {
+    height: 223px;
+    width: 90%;
+  }
+}

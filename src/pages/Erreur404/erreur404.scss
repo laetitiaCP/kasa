@@ -1,0 +1,45 @@
+@import "../../style/variables";
+@import "../../style/mixin";
+
+.erreur {
+  display: flex;
+  flex-direction: column;
+  &__num {
+    display: flex;
+    justify-content: center;
+    margin-top: 169px;
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-size: 288px;
+    font-weight: 700;
+    @include mobile-breakpoint {
+      font-size: 99px;
+    }
+  }
+  &__msg {
+    display: flex;
+    justify-content: center;
+    margin-top: 66px;
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-size: 36px;
+    font-weight: 500;
+    @include mobile-breakpoint {
+      font-size: 18px;
+      white-space: pre-line;
+      text-align: center;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 182px;
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-size: 18px;
+    font-weight: 500;
+    @include mobile-breakpoint {
+      font-size: 14px;
+    }
+  }
+}
