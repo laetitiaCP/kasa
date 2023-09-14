@@ -1,0 +1,49 @@
+@import "src/style/variables";
+
+.slide {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+  &__rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1%;
+    font-size: 45px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &__leftArrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 1%;
+    font-size: 45px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+.slider {
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+  }
+  &__number {
+    position: absolute;
+    z-index: 1;
+    font-family: $primaryFont;
+    font-weight: 500;
+    color: white;
+    left: 50%;
+    bottom: 5%;
+    font-size: 18px;
+  }
+}

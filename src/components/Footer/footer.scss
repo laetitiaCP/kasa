@@ -1,16 +1,35 @@
 @import "../../style/variables";
+@import "../../style/mixin";
 
 .footer {
-  background: black;
-  &&__img {
-    width: 122px;
-    height: 40px;
-  }
-  &&__txt {
-    color: white;
-    text-align: center;
-    font-family: $primaryFont;
-    font-size: 24px;
-    font-weight: 500;
+  background-color: black;
+  margin-top: 100px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 66px 464px 29px 463px;
+    @include mobile-breakpoint {
+      padding: 62px 0 62px 0;
+    }
+    &__img {
+      width: 122px;
+      height: 40px;
+      margin-bottom: 29px;
+      @include mobile-breakpoint {
+        margin-bottom: 0;
+      }
+    }
+    &__txt {
+      color: white;
+      font-family: $primaryFont;
+      font-size: 24px;
+      font-weight: 500;
+      @include mobile-breakpoint {
+        padding-top: 30px;
+        font-size: 12px;
+      }
+    }
   }
 }
