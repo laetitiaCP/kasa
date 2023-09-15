@@ -1,12 +1,17 @@
 @import "src/style/variables";
+@import "../../style/mixin";
 
 .ad {
-  margin-top: 20px;
+  margin: 30px 100px 0 100px;
   display: flex;
   justify-content: space-between;
+  @include mobile-breakpoint {
+    margin: 30px 20px 0 20px;
+    flex-direction: column;
+  }
   &__informations {
     &__title {
-      margin-top: 30px;
+      margin-top: 11px;
       margin-bottom: 0;
       color: $primaryColor;
       font-size:  36px;
@@ -31,8 +36,15 @@
     }
   }
   &__rate {
+    @include mobile-breakpoint {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
     &__host {
       display: flex;
+      justify-content: flex-end;
       & h3 {
         margin-right: 10px;
         color: $primaryColor;
@@ -53,8 +65,30 @@
 }
 
 .collapses {
+  margin: 0 100px 0 100px;
   display: flex;
-  & div {
-    width: 552px;
+  justify-content: space-between;
+  @include mobile-breakpoint {
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+  }
+  &__adCollapse {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 33px;
+    @include mobile-breakpoint {
+      width: 100%;
+    }
+    & div {
+      font-size: 18px;
+    }
+    & ul {
+      margin-top: 0;
+      padding: 0;
+      margin-left: 20px;
+      list-style: none;
+      font-size: 18px;
+    }
   }
 }

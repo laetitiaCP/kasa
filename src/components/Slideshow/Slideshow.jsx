@@ -23,10 +23,10 @@ function Slideshow({slides}) {
     return (
         <div className="slide">
             {slides.length > 1 &&
-                <img className="slide__leftArrow" src={arrowLeft} onClick={goToPrevious} />
+                <img className="slide__leftArrow" src={arrowLeft} onClick={goToPrevious} alt="précédent"/>
             }
             {slides.length > 1 &&
-                <img className="slide__rightArrow" src={arrowRight} onClick={goToNext} />
+                <img className="slide__rightArrow" src={arrowRight} onClick={goToNext} alt="suivant"/>
             }
             {slides.map((slide, index) => {
                 return (

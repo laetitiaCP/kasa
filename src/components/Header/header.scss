@@ -10,8 +10,12 @@
   }
 }
 .header {
+    margin: $margin;
     display: flex;
     justify-content: space-between;
+  @include mobile-breakpoint {
+    margin: 40px 20px 40px 20px;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;

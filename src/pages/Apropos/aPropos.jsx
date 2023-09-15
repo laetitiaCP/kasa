@@ -13,7 +13,7 @@ function APropos() {
             <Banner class={"aPropos-image"} source={image}/>
             <div className="collapses-wrap">
                 { dataApropos.map( (data) => (
-                    <Collapsible key={data.id} title={data.title} description={data.description}/>
+                    <Collapsible class="collapses-wrap__collapse" key={data.id} title={data.title} description={data.description}/>
                 ))}
 
             </div>

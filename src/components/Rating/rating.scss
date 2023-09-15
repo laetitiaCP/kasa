@@ -1,0 +1,20 @@
+@import "src/style/variables";
+@import "src/style/mixin";
+
+.rating {
+  width: 196px;
+  @include mobile-breakpoint {
+    align-self: center;
+  }
+  & svg {
+    width: 14%;
+    margin-right: 10px;
+  }
+}
+.colored-star {
+  fill: $primaryColor;
+}
+
+.empty-star {
+  fill: #E3E3E3;
+}

@@ -11,7 +11,7 @@ function Collapsible(props) {
     }
 
     return (
-        <div className="collapse">
+        <div className={props.class}>
             <button className="collapse__button" onClick={toggle}>
 
                     {props.title}

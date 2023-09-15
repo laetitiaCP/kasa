@@ -2,10 +2,10 @@
 @import "../../style/mixin";
 
 .banner {
+  margin: 63px 100px 0 100px;
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 90px;
   padding-top: 44px;
   justify-content: center;
   &__title {
@@ -13,7 +13,6 @@
     margin-right: auto;
     z-index: 1;
     color: white;
-    font-family: $primaryFont;
     font-size: 40px;
     font-weight: 500;
     line-height: 142.6%;
