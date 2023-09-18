@@ -14,7 +14,7 @@ function Home() {
             <Banner class={"banner__img"} source={image} title={locText} />
             <div className="cards">
                 {listAnnonces.map ( (annonce) => (
-                    <Cards key={annonce.id} title={annonce.title} cover={annonce.cover} link={`/logement/${annonce.id}`}/>
+                    <Cards key={annonce.id} title={annonce.title} cover={annonce.cover} link={`kasa/logement/${annonce.id}`}/>
                 )) }
 
             </div>

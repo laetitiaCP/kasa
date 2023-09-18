@@ -9,7 +9,8 @@ import Rating from "../../components/Rating/rating";
 function Logement() {
     document.title = "Kasa_Annonce";
 
-    const id = ((document.location.pathname).split("/"))[2];
+    const id = ((document.location.pathname).split("/"))[3];
+    
     let ad = [];
 
     AdsList.map( (locAd) => {
