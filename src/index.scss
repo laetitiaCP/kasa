@@ -2,13 +2,13 @@
 @import "style/mixin";
 
 body {
-  margin: 0;
+  max-width: 1650px;
+  margin-right: auto;
+  margin-left: auto;
   font-family: $primaryFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include mobile-breakpoint {
-    margin: 20px;
-  }
+
 }
 
 code {

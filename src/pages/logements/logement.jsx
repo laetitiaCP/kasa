@@ -5,6 +5,7 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 import "./logement.scss";
 import Rating from "../../components/Rating/rating";
 import {useParams} from "react-router-dom";
+import Footer from "../../components/Footer/footer";
 
 
 function Logement() {
@@ -59,6 +60,7 @@ function Logement() {
                 <Collapsible class="collapses__adCollapse" title = "Description" description = {ad.description} />
                 <Collapsible class="collapses__adCollapse" title = "Equipements" description= {description} />
             </div>
+            <Footer />
         </div>
     )
 }

@@ -4,6 +4,7 @@ import image from "../../images/ImgApropos.png";
 import Collapsible from "../../components/Collapsible/collapsible";
 import dataApropos from "../../data/dataApropos.json";
 import "./Apropos.scss";
+import Footer from "../../components/Footer/footer";
 
 function APropos() {
     document.title="Kasa_A propos";
@@ -17,8 +18,8 @@ function APropos() {
                 ))}
 
             </div>
+            <Footer />
         </div>
-
     )
 }
 
