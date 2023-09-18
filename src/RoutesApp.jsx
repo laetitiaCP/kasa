@@ -11,10 +11,10 @@ function RoutesApp() {
 
   return (
       <Routes>
-          <Route path="/" exact element={ <Home /> } />
+          <Route path="/"  element={ <Home /> } />
           <Route path="/apropos" element={ <APropos /> } />
           {listAnnonces.map( (annonce) => (
-              <Route key={annonce.id} path={`/logement/:id`} element={ <Logement /> } />
+              <Route key={annonce.id} exact path={`/logement/:id`} element={ <Logement /> } />
           ))}
           <Route path="/*" element={ <Erreur404 /> } />
 

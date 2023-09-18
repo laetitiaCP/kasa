@@ -11,7 +11,6 @@ function Logement() {
     document.title = "Kasa_Annonce";
 
     const idLogement = useParams('id');
-    console.log(idLogement.id)
     
     let ad = [];
 
