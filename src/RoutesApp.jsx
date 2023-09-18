@@ -14,7 +14,7 @@ function RoutesApp() {
           <Route path="/" exact element={ <Home /> } />
           <Route path="/apropos" element={ <APropos /> } />
           {listAnnonces.map( (annonce) => (
-              <Route key={annonce.id} path={`/logement/${annonce.id}`} element={ <Logement /> } />
+              <Route key={annonce.id} path={`/logement/:id`} element={ <Logement /> } />
           ))}
           <Route path="/*" element={ <Erreur404 /> } />
 

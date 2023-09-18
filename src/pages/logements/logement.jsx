@@ -4,17 +4,19 @@ import Collapsible from "../../components/Collapsible/collapsible";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import "./logement.scss";
 import Rating from "../../components/Rating/rating";
+import {useParams} from "react-router-dom";
 
 
 function Logement() {
     document.title = "Kasa_Annonce";
 
-    const id = ((document.location.pathname).split("/"))[3];
+    const idLogement = useParams('id');
+    console.log(idLogement.id)
     
     let ad = [];
 
     AdsList.map( (locAd) => {
-        if (locAd.id === id) {
+        if (locAd.id === idLogement.id) {
             ad = locAd;
         }
         return ad;
