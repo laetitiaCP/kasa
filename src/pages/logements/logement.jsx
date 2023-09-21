@@ -14,37 +14,21 @@ function Logement() {
 
     const idLogement = useParams('id');
     
-    let ad = [];
+    const ad = AdsList.find(locAd => locAd.id === idLogement.id);
 
-    AdsList.map( (locAd) => {
-        if (locAd.id === idLogement.id) {
-            ad = locAd;
-        }
-        return ad;
-    })
+    function textLocationFormatting() {
+        let locRegion = (ad.location).split("-");
+        let locCity = ((locRegion[1]).split(" "))[1];
+        return locRegion[0] + ", " + locCity;
+    }
 
-    let nameHost ="";
-    let description;
-    let location;
-    let ville;
-    let textLocation;
-    console.log(ad)
+    function nameHostFormatting() {
+        return (ad.host.name).split(" ")[0] + "\n" + (ad.host.name).split(" ")[1];
+    }
 
-    if (ad.id) {
-        nameHost = (ad.host.name).split(" ")[0] + "\n" + (ad.host.name).split(" ")[1];
-
-        description = (
-            <ul>
-                { ad.equipments.map ( (equipment, index) => {
-                    return <li key={index}>{equipment}</li>
-                }) }
-            </ul>
-        );
-
-        location = (ad.location).split("-");
-        ville = ((location[1]).split(" "))[1];
-        textLocation = location[0] + ", " + ville;
-
+    if (!ad.id) {
+        return <Erreur404/>
+    } else {
         return (
             <div>
                 <Header />
@@ -52,14 +36,14 @@ function Logement() {
                 <div className="ad">
                     <div className="ad__informations">
                         <h1 className="ad__informations__title">{ad.title}</h1>
-                        <h2 className="ad__informations__location">{textLocation}</h2>
+                        <h2 className="ad__informations__location">{textLocationFormatting()}</h2>
                         {ad.tags.map( (tag, index) => {
                             return <button className="ad__informations__tag" key={index} >{(tag.split(" ")[0])}</button>
                         })}
                     </div>
                     <div className="ad__rate">
                         <div className="ad__rate__host">
-                            <h3>{nameHost}</h3>
+                            <h3>{nameHostFormatting()}</h3>
                             <img src={ad.host.picture} alt="hôte"/>
                         </div>
                         <Rating nbStars = {ad.rating} />
@@ -67,13 +51,11 @@ function Logement() {
                 </div>
                 <div className="collapses">
                     <Collapsible class="collapses__adCollapse" title = "Description" description = {ad.description} />
-                    <Collapsible class="collapses__adCollapse" title = "Equipements" description= {description} />
+                    <Collapsible class="collapses__adCollapse" title = "Equipements" description= {ad.equipments} />
                 </div>
                 <Footer />
             </div>
         )
-    } else {
-        return <Erreur404 />
     }
 }
 
